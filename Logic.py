@@ -12,5 +12,5 @@ class logic:
         return Words
 
     def Randomise(self, Words):
-        random.randint(Words)
+        random.shuffle(Words)
         return Words
