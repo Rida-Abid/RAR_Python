@@ -1,20 +1,26 @@
 import sys
 from Logic import logic
 
+def  DisplayValues (heading, Words):
+        print(heading)
+        print("-----------------------------")
+        for word in Words:
+            print(word)
+
 def main():
     args = sys.argv[1:]
         
 
-    if (len(args) != 5):
-        print ("error:Enter atleast 5 words")
-        print ("usage:Please enter 5 words")
+    if (len(args) < 1):
+        print ("error:Enter atleast 2 words")
+        print ("usage:Please enter words")
+        return 
 
-    else:
-        Words = []
-        Words = args
-
-        objL = logic()
-        objP = DisplayValues
+    Words = []
+    Words = args
+    objL = logic()
+    
+      
          
     DisplayValues("Original List",Words)
     DisplayValues("ReversedList",objL.ReversedList(Words))
@@ -22,11 +28,7 @@ def main():
     DisplayValues("Randomised List",objL.Randomise(Words))
 
 
-def  DisplayValues (heading, Words):
-    print(heading)
-    print("-----------------------------")
-    for word in Words:
-        print(word)
+    
         
          
 if __name__ == '__main__':
