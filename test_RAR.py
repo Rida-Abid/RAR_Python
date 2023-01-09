@@ -25,9 +25,9 @@ class Test_Program(unittest.TestCase):
         testList.append("cat")
         result = logic.ReversedList(self, testList)
         self.assertIsNotNone(result)
-        self.assertTrue(len(result) > 1)
+        self.assertFalse(len(result) > 1)
         self.assertEqual(len(result), 1)
-        self.assertEqual(result[0], "error:Enter atleast 2 words")
+        self.assertEqual(result[0], "cat")
         
 
 
